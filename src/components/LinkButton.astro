@@ -1,0 +1,32 @@
+---
+export interface Props {
+  href: string;
+  className?: string;
+  ariaLabel?: string;
+  title?: string;
+  disabled?: boolean;
+}
+
+const { href, className, ariaLabel, title, disabled = false } = Astro.props;
+---
+
+<div
+  class="btn text-md group flex items-center bg-transparent p-2 font-thin tracking-widest text-white"
+>
+  <a
+    href={disabled ? "#" : href}
+    tabindex={disabled ? "-1" : "0"}
+    class={`group inline-block ${className}`}
+    aria-label={ariaLabel}
+    title={title}
+    aria-disabled={disabled}
+  >
+    <slot />
+  </a>
+</div>
+
+<style>
+  a {
+    @apply relative pb-1 pr-4 text-white after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-purple-500 after:transition-transform after:duration-500 after:ease-out after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100;
+  }
+</style>
