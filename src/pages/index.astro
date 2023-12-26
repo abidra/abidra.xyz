@@ -26,7 +26,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <main id="main-content">
     <section id="hero">
       <div class="flex">
-        <h1 class="mr-2">Hi! I'm Abid,</h1>
+        <h1 class="mr-2">Hi! I'm Abid</h1>
         <h1 id="typewriter"></h1>
       </div>
       <p>
@@ -40,7 +40,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </p>
       <div class="flex items-baseline space-x-8 py-8">
         <Button href="/posts">Read Blog</Button>
-        <Text><a href="">Download CV</a></Text>
+        <LinkButton href="/resume">See Resume</LinkButton>
       </div>
       {
         // only display if at least one social link is enabled

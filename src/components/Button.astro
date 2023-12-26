@@ -1,17 +1,19 @@
 ---
 export interface Props {
   href: string;
+  id?: string;
   className?: string;
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
 }
 
-const { href, ariaLabel, title, disabled = false } = Astro.props;
+const { href, id, ariaLabel, title, disabled = false } = Astro.props;
 ---
 
 <a
   href={disabled ? "#" : href}
+  id={id}
   tabindex={disabled ? "-1" : "0"}
   class="text-md group relative inline-flex items-center justify-center rounded-md bg-gray-800 px-6 py-3 font-medium tracking-tighter text-white"
   aria-label={ariaLabel}
