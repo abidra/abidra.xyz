@@ -52,10 +52,14 @@ const ogUrl = new URL(
       <Content />
     </article>
 
-    <ul class="my-8">
-      {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
-    </ul>
-    <div class="flex justify-end">
+    <div class="my-8 flex items-center">
+      <span>Tags:</span>
+      <ul>
+        {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
+      </ul>
+    </div>
+    <div class="giscus"></div>
+    <div class="mt-4 flex justify-end">
       <button
         id="back-to-top"
         class="focus-outline whitespace-nowrap hover:opacity-75"
@@ -89,3 +93,18 @@ const ogUrl = new URL(
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   });
 </script>
+<script
+  src="https://giscus.app/client.js"
+  data-repo="abidra/abidra.xyz"
+  data-repo-id="R_kgDOK6aM0w"
+  data-category="General"
+  data-category-id="DIC_kwDOK6aM084CcAKn"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="dark"
+  data-lang="en"
+  crossorigin="anonymous"
+  async></script>
