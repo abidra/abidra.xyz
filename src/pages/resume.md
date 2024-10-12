@@ -15,7 +15,11 @@ Versatile and passionate software engineer specializing in both frontend and bac
 
 ### Software Engineer
 
-Grof · Full-time (Mar 2023 - Present)
+Master Team · Full-time (Oct 2024 - Present)
+
+### Software Engineer
+
+Grof · Full-time (Mar 2023 - Sep 2024)
 
 - Refactor legacy codebase from unstructered pattern to clean architecture.
 - Increase web speed perfomance using react hooks such as `useMemo`, `useCallback`, and put only necessary dependencies on `useEffect`.
